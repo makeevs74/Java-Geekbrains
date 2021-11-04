@@ -10,7 +10,7 @@ public class HomeWorkOne {
 
     //--------Задание первое--------
 
-    public static void printThreeWords() {
+    static void printThreeWords() {
         System.out.println("Orange");
         System.out.println("Banana");
         System.out.println("Apple");
@@ -18,7 +18,7 @@ public class HomeWorkOne {
 
     //--------Задание второе--------
 
-    public static void checkSumSign() {
+    static void checkSumSign() {
         int a = 7;
         int b = 21;
 
@@ -35,7 +35,7 @@ public class HomeWorkOne {
 
     //--------Задание третье--------
 
-    public static void printColor() {
+    static void printColor() {
         int value = 5;
 
     // Делаем отступ от второго задания
@@ -54,7 +54,7 @@ public class HomeWorkOne {
 
     //--------Задание четвертое--------
 
-    public static void compareNumbers() {
+    static void compareNumbers() {
         int a = 10;
         int b = 4;
 
