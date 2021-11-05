@@ -1,4 +1,9 @@
-import javax.lang.model.util.ElementScanner6;
+/**
+  * Java. Homework 1
+  *
+  * @author Makeev Sergey
+  * @version 04.11.2021
+  */
 
 public class HomeWorkOne {
     public static void main(String[] args) {
@@ -8,7 +13,7 @@ public class HomeWorkOne {
         compareNumbers();
     }
 
-    //--------Задание первое--------
+    //--------Exercise one--------
 
     static void printThreeWords() {
         System.out.println("Orange");
@@ -16,49 +21,49 @@ public class HomeWorkOne {
         System.out.println("Apple");
     }
 
-    //--------Задание второе--------
+    //--------Exercise two--------
 
     static void checkSumSign() {
         int a = 7;
         int b = 21;
 
-        // Делаем отступ от первого задания
+        // Make an indent from previous exercise
         System.out.println(" ");
 
         if ((a+b)>=0) {
-            System.out.println("Сумма положительная");
+            System.out.println("Sum is positive");
         }
         else {
-            System.out.println("Сумма отрицательная");
+            System.out.println("Sum is negative");
         }
     }
 
-    //--------Задание третье--------
+    //--------Exercise three--------
 
     static void printColor() {
         int value = 5;
 
-    // Делаем отступ от второго задания
+        //  Make an indent from previous exercise
         System.out.println(" ");
 
         if (value<=0) {
-            System.out.println ("Красный");
+            System.out.println ("Red");
         }
         if (value>0 && value<=100) {
-            System.out.println ("Желтый");
+            System.out.println ("Yellow");
         }
         if (value>100) {
-            System.out.println ("Зеленый");
+            System.out.println ("Green");
         }
     }
 
-    //--------Задание четвертое--------
+    //--------Exercise four--------
 
     static void compareNumbers() {
         int a = 10;
         int b = 4;
 
-        // Делаем отступ от третьего задания
+        // Make an indent from previous exercise
         System.out.println(" ");
 
         System.out.print(a>=b? "a>=b" : "a<b");
