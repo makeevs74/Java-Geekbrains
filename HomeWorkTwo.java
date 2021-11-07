@@ -7,14 +7,19 @@
 
 class HomeWorkTwo {
     public static void main(String[] args) {
-        System.out.println(checkSumOne(5, 7));
+        checkSumOne(5, 7);
         checkPositiveOrNegative(-1);
-        System.out.println(checkNegative(-1));
-        printStringNTimes("Привет!", 3);
-    //    System.out.println(isItLeapYear(2100));
-    //    System.out.println(isItLeapYear(2200));
-    //    System.out.println(isItLeapYear(2400));
-    //    System.out.println(isItLeapYear(2020));
+        checkPositiveOrNegative(0);
+        checkPositiveOrNegative(11);
+        System.out.println(checkNegative(1));
+        System.out.println(checkNegative(-5));
+        System.out.println(checkNegative(0));
+        printStringNTimes("Hello!", 5);
+        printStringNTimes("Good Buy!", 4);
+        System.out.println(isItLeapYear(2100));
+        System.out.println(isItLeapYear(2200));
+        System.out.println(isItLeapYear(2400));
+        System.out.println(isItLeapYear(2020));
     }
 
     //--------Exercise One--------
@@ -56,28 +61,21 @@ class HomeWorkTwo {
         System.out.println();
 
         for (int i = 0; i < n; i++) {
-            System.out.print(s);
-            System.out.println();
+            System.out.println(s);
         }
     }
 
     //--------Excercise Five--------
 
-    // static boolean isItLeapYear(int a) {
+    static boolean isItLeapYear(int a) {
 
-    // //--Make an indent from previous excercise--
-    //     System.out.println();
+    //--Make an indent from previous excercise--
+        System.out.println();
 
-    //     if (a % 4 == 0) {
-    //         if (a % 100 == 0) {
-    //             if (a % 400 == 0) {
-    //                 return true;
-    //             } else {
-    //                 return false;
-    //             }
-    //         }
-    //     } else {
-    //         return false;
-    //     }
-    // }
+        if ((a % 400 == 0) || (a % 4 == 0) && (a % 100 != 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }        
 }
