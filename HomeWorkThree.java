@@ -34,15 +34,7 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
         System.out.println("Exercise One \n"
         + Arrays.toString(arr));
         for (int i = 0; i < arr.length; i++) {
-            //С тернарным я не смог, постоянно ругался на знак "?"
-            //arr[i] == 0 ? arr[i] = 1 : arr[i] = 0;
-            //System.out.print(arr[i]);
-            if (arr[i] == 0) {
-                arr[i] = 1;
-            } else {
-                arr[i] = 0;  
-            }
-            
+            arr[i] = arr[i] == 0? 1 : 0;
         }
         System.out.println(Arrays.toString(arr));
     }
