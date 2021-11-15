@@ -14,7 +14,7 @@ public class TiсTaсToe {
     }
 
     TiсTaсToe() {
-        table = new char[3][3];
+        table = new char[5][5];
         sc = new Scanner(System.in);
         random = new Random();
     }
@@ -47,16 +47,16 @@ public class TiсTaсToe {
     }
 
     void initTable() {
-        for (int i = 0; i < 3; i++) {
-            for (int j =0; j < 3; j++) {
+        for (int i = 0; i < 5; i++) {
+            for (int j =0; j < 5; j++) {
                 table[i][j] = SIGN_EMPTY;
             }
         }
     }
 
     void printTable() {
-        for (int i = 0; i < 3; i++) {
-            for (int j =0; j < 3; j++) {
+        for (int i = 0; i < 5; i++) {
+            for (int j =0; j < 5; j++) {
                 System.out.print(table[i][j] + " ");
             }
             System.out.println();
@@ -66,7 +66,7 @@ public class TiсTaсToe {
     void turnHuman() {
         int x, y;
         do {
-            System.out.print("Your turn x y [1..3]: ");
+            System.out.print("Your turn x y [1..5]: ");
             x = sc.nextInt() - 1;
             y = sc.nextInt() - 1;
         } while (!isCellValid(x, y));
@@ -76,34 +76,34 @@ public class TiсTaсToe {
      void turnAI() {
         int x, y;
         do {
-            x = random.nextInt(3);
-            y = random.nextInt(3);
+            x = random.nextInt(5);
+            y = random.nextInt(5);
         } while (!isCellValid(x, y));
         table[y][x] = SIGN_O;
     }
 
     public boolean checkWin(char ch) {
-        for (int i = 0; i < 3; i++) {
-            if ((table[0][i] == ch && table[1][i] == ch && table[2][i] == ch) || 
+        for (int i = 0; i < 5; i++) {
+            if ((table[0][i] == ch && table[1][i] == ch && table[2][i] == ch && table[3][i] == ch && table[4][i] == ch) || 
             (table[i][0] == ch && table[i][1] == ch && table[i][2] == ch)) {
                 return true;
             }
         }
-        if (table[0][0] == ch && table[1][1] == ch && table[2][2] == ch) return true;
-        if (table[2][0] == ch && table[1][1] == ch && table[0][2] == ch) return true;
+        if (table[0][0] == ch && table[1][1] == ch && table[2][2] == ch && table[3][3] == ch && table[4][4] == ch) return true;
+        if (table[4][0] == ch && table[3][1] == ch && table[2][2] == ch && table[1][3] == ch && table[0][4] == ch) return true;
         return false;
     }
 
     boolean isCellValid(int x, int y) {
-        if (x < 0 || y < 0 || x > 2 || y > 2) {
+        if (x < 0 || y < 0 || x > 4 || y > 4) {
             return false;
         }
         return table[y][x] == SIGN_EMPTY;
     }
 
     boolean isTableFull() {
-        for (int i = 0; i < 3; i++) {
-            for (int j =0; j < 3; j++) {
+        for (int i = 0; i < 5; i++) {
+            for (int j =0; j < 5; j++) {
                 if (table[i][j] == SIGN_EMPTY) {
                     return false;
                 }
