@@ -84,9 +84,8 @@ public class TiсTaсToe {
 
     public boolean checkWin(char ch) {
         for (int i = 0; i < 3; i++) {
-            if (table[0][i] == ch && table[1][i] == ch && table[2][i] == ch) {
-                return true;
-            } else if (table[i][0] == ch && table[i][1] == ch && table[i][2] == ch) {
+            if ((table[0][i] == ch && table[1][i] == ch && table[2][i] == ch) || 
+            (table[i][0] == ch && table[i][1] == ch && table[i][2] == ch)) {
                 return true;
             }
         }
