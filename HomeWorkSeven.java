@@ -50,12 +50,12 @@ class Cat {
         return "Cat: " + name + " eats " + appetite + " pieces";
     }
 
-    boolean eat(Plate plate) {
+    void eat(Plate plate) {
         if (fullness == false) {
             plate.decreaseFood(appetite);
-            return fullness = true;
+            fullness = true;
         } else {
-            return fullness = false;
+            fullness = false;
         }
     }
 }
@@ -68,12 +68,12 @@ class Plate {
         this.food = food;
     }
 
-    public boolean decreaseFood(int amount) {
+    public void decreaseFood(int amount) {
         if (food >= amount) {
             this.food = food - amount;
-            return foodIsEnough = true;
+            foodIsEnough = true;
         } else {
-            return foodIsEnough = false;
+            foodIsEnough = false;
         }
     }
 
