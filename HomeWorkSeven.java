@@ -2,10 +2,10 @@
   * Java. Homework 7
   *
   * @author Makeev Sergey
-  * @version 23.11.2021
+  * @version 26.11.2021
   */
 
-class HomeWorkSeven {
+  class HomeWorkSeven {
     public static void main(String[] args) {
         Cat[] cat = new Cat[3];
         cat[0] = new Cat("Barsik", 4);
@@ -34,10 +34,9 @@ class HomeWorkSeven {
 }
 
 class Cat {
-    String name;
-    int appetite;
-    boolean fullness;
-    boolean foodIsEnough;
+    protected String name;
+    protected int appetite;
+    protected boolean fullness;
 
     Cat(String name, int appetite) {
         this.name = name;
@@ -52,28 +51,24 @@ class Cat {
 
     void eat(Plate plate) {
         if (fullness == false) {
-            plate.decreaseFood(appetite);
-            fullness = true;
-        } else {
-            fullness = false;
+            fullness = plate.decreaseFood(appetite);
         }
     }
 }
 
 class Plate {
-    int food;
-    boolean foodIsEnough;
+    protected int food;
 
     Plate(int food) {
         this.food = food;
     }
 
-    public void decreaseFood(int amount) {
+    boolean decreaseFood(int amount) {
         if (food >= amount) {
             this.food = food - amount;
-            foodIsEnough = true;
+            return true;
         } else {
-            foodIsEnough = false;
+            return false;
         }
     }
 
