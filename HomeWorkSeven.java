@@ -7,27 +7,27 @@
 
   class HomeWorkSeven {
     public static void main(String[] args) {
-        Cat[] cat = new Cat[3];
-        cat[0] = new Cat("Barsik", 4);
-        cat[1] = new Cat("Murzik", 5);
-        cat[2] = new Cat("Pushok", 3);
+        Cat[] cats = new Cat[3];
+        cats[0] = new Cat("Barsik", 4);
+        cats[1] = new Cat("Murzik", 5);
+        cats[2] = new Cat("Pushok", 3);
         Plate plate = new Plate(10);
         System.out.println(plate);
 
-        for (int i = 0; i < cat.length; i++) {
-            System.out.println(cat[i]);
-            cat[i].eat(plate);
+        for (Cat cat : cats) {
+            System.out.println(cat);
+            cat.eat(plate);
             System.out.println(plate);
-            System.out.println(cat[i].name + " fullness is: " + cat[i].fullness);
+            System.out.println(cat.name + " fullness is: " + cat.fullness);
             System.out.println();
         }
         System.out.println("Добавим немного еды");
         plate.addInPlate(20);
-        for (int i = 0; i < cat.length; i++) {
-            System.out.println(cat[i]);
-            cat[i].eat(plate);
+        for (Cat cat : cats) {
+            System.out.println(cat);
+            cat.eat(plate);
             System.out.println(plate);
-            System.out.println(cat[i].name + " fullness is: " + cat[i].fullness);
+            System.out.println(cat.name + " fullness is: " + cat.fullness);
             System.out.println();
         }
     }
